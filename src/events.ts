@@ -31,23 +31,11 @@ export function toTradeEvent(event: TradeEvent): TradeEvent {
     mint: new PublicKey(event.mint),
     solAmount: BigInt(event.solAmount),
     tokenAmount: BigInt(event.tokenAmount),
-    isBuy: event.isBuy,
-    user: new PublicKey(event.user),
-    timestamp: Number(event.timestamp),
-    virtualSolReserves: BigInt(event.virtualSolReserves),
-    virtualTokenReserves: BigInt(event.virtualTokenReserves),
-    realSolReserves: BigInt(event.realSolReserves),
-    realTokenReserves: BigInt(event.realTokenReserves),
   };
 }
 
 export function toSetParamsEvent(event: SetParamsEvent): SetParamsEvent {
   return {
     feeRecipient: new PublicKey(event.feeRecipient),
-    initialVirtualTokenReserves: BigInt(event.initialVirtualTokenReserves),
-    initialVirtualSolReserves: BigInt(event.initialVirtualSolReserves),
-    initialRealTokenReserves: BigInt(event.initialRealTokenReserves),
-    tokenTotalSupply: BigInt(event.tokenTotalSupply),
-    feeBasisPoints: BigInt(event.feeBasisPoints),
   };
 }
