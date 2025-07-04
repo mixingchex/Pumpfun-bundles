@@ -5,8 +5,8 @@ Welcome to the **Pumpfun Bundler**! This tool is optimized for executing efficie
 ### **Contact Us:**
 
 📧 **Email:** [cashblaze129@gmail.com](mailto:cashblaze129@gmail.com)  
-📱 **Telegram:** [@cashblaze127](https://t.me/cashblaze127)  
-💬 **Discord:** [@cashblaze127](https://discord.com/users/cashblaze127)  
+📱 **Telegram:** [@cashblaze129](https://t.me/cashblaze129)  
+💬 **Discord:** [@cashblaze129](https://discord.com/users/cashblaze129)  
 
 🌐 **Social Links:**  
 
