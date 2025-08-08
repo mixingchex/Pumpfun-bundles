@@ -85,3 +85,30 @@ This document curates high‑quality references and maps them to implementation 
 - pump.fun create/buy/sell → `src/pumpfun.ts`, `src/IDL/*`
 - LUTs → `index.ts:addAddressesToTable()`, `closeLut.ts`
 - Distribution → `src/util.ts:newSendToken()`
+
+## Additional high-quality references
+
+### QuickNode Solana examples
+
+- Jupiter swap bot (TS)
+  - Path: `qn-guide-examples/solana/jupiter-bot/bot.ts`
+  - Why: Clean quote → swap → deserialize → sign → send flow with Jupiter v6.
+  - Map: Use to finish `utils/swapOnlyAmm.ts` sell path and include `dynamicComputeUnitLimit` and `prioritizationFeeLamports`.
+  - Link: https://github.com/quiknode-labs/qn-guide-examples/tree/main/solana
+
+- Mint NFT (Token Metadata basics)
+  - Path: `qn-guide-examples/solana/mint-nft/app.ts`
+  - Why: Demonstrates connection, keypairs, PDAs, metadata URI handling consistent with MPL Token Metadata.
+  - Map: Cross-check PDA derivation and metadata wiring in `src/pumpfun.ts:getCreateInstructions`.
+  - Link: https://github.com/quiknode-labs/qn-guide-examples/tree/main/solana
+
+### Multi-platform sniper bot (Pump.fun / Pumpswap / Raydium)
+
+- Repo: coffellas-cto/Solana-Pumpfun-Pumpswap-Raydium-Copy-Sniper-Trading-Bot
+  - Features: Shredstream integration, copy-trading, bundling for Raydium & Pump.fun
+  - Why: Good reference for end-to-end bot orchestration across venues
+  - Map:
+    - Shredstream subscriber → integrate with Yellowstone/Shredstream notes above
+    - Bundling flow → align with `executor/jito.ts` patterns
+    - Pump.fun integration → compare instruction building with `src/pumpfun.ts`
+  - Link: https://github.com/coffellas-cto/Solana-Pumpfun-Pumpswap-Raydium-Copy-Sniper-Trading-Bot
