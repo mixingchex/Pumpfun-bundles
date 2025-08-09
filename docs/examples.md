@@ -123,3 +123,13 @@ This document curates high‑quality references and maps them to implementation 
     - Use bundling approach alongside `executor/jito.ts` (tip as last ix)
     - Mirror env-based key management; avoid hardcoding keys
   - Link: https://github.com/bilix-software/pump-fun-token-launcher
+
+### Vulacana (multi-RPC response aggregator)
+
+- Repo: Kher-Labs/vulacana
+  - Focus: Fan-out identical JSON-RPC requests across multiple RPC providers; return first successful response; provider-method compatibility routing
+  - Why: Improves reliability of `getLatestBlockhash`, signature status/confirmations, and reads under congestion
+  - Map:
+    - Point `Connection(RPC_ENDPOINT)` to Vulacana’s proxy URL in `executor/legacy.ts`, `executor/jito.ts`, and `src/util.ts` for standard JSON-RPC (keep Jito endpoints unchanged)
+    - Use for `buildVersionedTx`, `confirmTransaction/getSignatureStatuses`, and read calls; configure via `AGGREGATED_RPC_URL`
+  - Link: https://github.com/Kher-Labs/vulacana
