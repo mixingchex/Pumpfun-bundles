@@ -112,3 +112,14 @@ This document curates high‑quality references and maps them to implementation 
     - Bundling flow → align with `executor/jito.ts` patterns
     - Pump.fun integration → compare instruction building with `src/pumpfun.ts`
   - Link: https://github.com/coffellas-cto/Solana-Pumpfun-Pumpswap-Raydium-Copy-Sniper-Trading-Bot
+
+### Pump.fun token launcher (TS)
+
+- Repo: bilix-software/pump-fun-token-launcher
+  - Focus: Programmatic Pump.fun token launch; CLI bundling multiple buys; web/Telegram integrations
+  - Why: Clean launcher API and multi-buy bundling flow to complement create/buy logic
+  - Map:
+    - Compare instruction building with `src/pumpfun.ts` (PDAs, accounts per IDL)
+    - Use bundling approach alongside `executor/jito.ts` (tip as last ix)
+    - Mirror env-based key management; avoid hardcoding keys
+  - Link: https://github.com/bilix-software/pump-fun-token-launcher
